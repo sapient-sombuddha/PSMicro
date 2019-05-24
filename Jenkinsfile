@@ -4,15 +4,15 @@ pipeline{
     stages{
         stage('Compile'){
             steps{
-                withMaven(maven: 'maven_version'){
-                    sh 'mvn clean compile'
+                withMaven(maven: 'maven_3'){
+                    bat 'mvn clean compile'
                 }
             }
         }
-        stage('Test'){
+        stage('Testing'){
             steps{
-                 withMaven(maven: 'maven_version'){
-                     sh 'mvn test'
+                 withMaven(maven: 'maven_3'){
+                     bat 'mvn test'
                  }
             }
         }
