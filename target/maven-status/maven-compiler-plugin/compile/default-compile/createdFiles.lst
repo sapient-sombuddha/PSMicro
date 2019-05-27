@@ -1,1 +1,5 @@
-SampleMavenLifecycleClass.class
+profiles\Application.class
+profiles\service\PersonService.class
+profiles\controller\PersonController.class
+profiles\models\Person.class
+profiles\repository\PersonRepository.class

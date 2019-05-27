@@ -16,5 +16,13 @@ pipeline{
                  }
             }
         }
+
+        stage('Packaging'){
+             steps{
+                  withMaven(maven: 'maven_3'){
+                      bat 'mvn package'
+                  }
+             }
+        }
     }
 }
