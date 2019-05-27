@@ -26,7 +26,9 @@ pipeline{
         }
 
         stage('Deploy'){
-            bat "copy C:\\Users\\somchakr\\.jenkins\\workspace\\PSMicro\\target\\*.jar C:\\Users\\somchakr\\Desktop\\apache-tomcat-9.0.20\\webapps\\"
+            steps{
+                bat "copy C:\\Users\\somchakr\\.jenkins\\workspace\\PSMicro\\target\\*.jar C:\\Users\\somchakr\\Desktop\\apache-tomcat-9.0.20\\webapps\\"
+            }
         }
     }
 }
