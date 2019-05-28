@@ -27,7 +27,9 @@ pipeline{
 
         stage('Deploy'){
             steps{
-                bat 'mvn tomcat7:deploy'
+                withMaven(maven: 'maven_3'){
+                    bat 'mvn tomcat7:deploy'
+                }
             }
         }
     }
