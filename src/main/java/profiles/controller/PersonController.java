@@ -16,6 +16,10 @@ public class PersonController {
     @Autowired
     PersonService service;
 
+    @RequestMapping("/hello")
+    public String hello(){
+        return "Hello world";
+    }
     @RequestMapping("/create")
     public Person create(@RequestParam String firstname, @RequestParam String lastname, @RequestParam int age){
         Person p = service.createProfile(firstname, lastname, age);
