@@ -27,7 +27,7 @@ pipeline{
 
         stage('Deploy'){
             steps{
-                bat "copy C:\\Users\\somchakr\\.jenkins\\workspace\\PSMicro\\target\\*.war C:\\Users\\somchakr\\Desktop\\apache-tomcat-9.0.20\\webapps\\"
+                bat 'mvn tomcat7:deploy'
             }
         }
     }
